@@ -51,3 +51,106 @@ select {
   font-size: inherit;
 }
 /* CSS Reset */
+
+body {
+  font-family: "Roboto Condensed", serif;
+  background-color: #d1dff6;
+}
+
+.nav-list {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0 1rem 0;
+
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.nav-list-show {
+  width: 25rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-inline: 1rem;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #850101;
+  cursor: pointer;
+}
+
+.close:hover {
+  animation-name: rotate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding-block: 0.5rem;
+  margin-block: -0.5rem;
+  transition: 0.5s;
+  padding-left: 1rem;
+}
+
+.links a:hover {
+  background-color: #49a6e9;
+  color: #fff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.social-links i {
+  color: #49a6e9;
+}
+
+.hamburger {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #49a6e9;
+  transition: 0.5s;
+}
+
+.hamburger:hover {
+  opacity: 0.5;
+}
