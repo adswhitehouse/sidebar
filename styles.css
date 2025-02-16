@@ -58,20 +58,19 @@ body {
 }
 
 .nav-list {
+  width: 25rem;
   background-color: #fff;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0.5rem 0 1rem 0;
-
-  width: 0;
-  overflow: hidden;
+  transform: translate(-100%);
   transition: 0.5s;
 }
 
 .nav-list-show {
-  width: 25rem;
+  transform: translate(0);
 }
 
 .logo {
@@ -126,6 +125,7 @@ body {
 .links a:hover {
   background-color: #49a6e9;
   color: #fff;
+  padding-left: 2rem;
 }
 
 .social-links {
@@ -141,16 +141,27 @@ body {
 
 .hamburger {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 0.5rem;
+  right: 1rem;
   font-size: 3rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
   color: #49a6e9;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .hamburger:hover {
   opacity: 0.5;
+}
+
+@media screen and (max-width: 35rem) {
+  .nav-list {
+    width: 100%;
+  }
+
+  .close {
+    display: none;
+  }
 }
